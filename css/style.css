@@ -1,0 +1,149 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del nav (barra de navegación) */
+/* Barra de navegación */
+nav {
+    background-color: #004080; /* Fondo azul oscuro del menú */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Espacio entre los enlaces */
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: white; /* Color inicial del texto */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado interno */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+}
+
+nav a:hover {
+    color: #87CEEB; /* Color celeste al pasar el cursor */
+    background-color: rgb(212, 207, 207); /* Fondo blanco */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+
+/* Banner principal */
+.banner {
+    background-color: #007bff; 
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Ajusta el alto del banner */
+    padding: 50px 0;
+    margin-bottom: 100px; /* Espacio abajo del banner */
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+
+.banner h1, .banner p, .banner a {
+    position: relative;
+    z-index: 2;
+}
+
+/* Carrusel */
+.carousel img {
+    width: 100%; 
+    height: auto; 
+    max-height: 400px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+@media (max-width: 768px) {
+    .carousel img {
+        max-height: 250px;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #dee1e4; 
+    color: black;  /* Cambiar color del texto para que contraste mejor */
+    padding: 4px 0;  /* Reducir el padding para hacer el footer más compacto */
+    text-align: center;
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+}
+
+footer a {
+    color:  #007bff; ; /* Color de los iconos por defecto */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Suavizar transición del color */
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #397cc4; /* Color azul para el hover */
+}
+
+/* Iconos sociales en el footer */
+footer .bi {
+    font-size: 1.5rem;  /* Aumentar tamaño de los iconos */
+    transition: color 0.3s ease;
+}
+
+footer .bi:hover {
+    color: #007bff; /* Cambiar color de los iconos al pasar el cursor */
+}
+
+/* Tarjetas de contenido */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Imágenes específicas */
+.img-desastre {
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo */
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto; /* Centra la imagen */
+    display: block;
+}
+
+/* Responsivo para texto */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+
+    .banner p {
+        font-size: 1rem; /* Reduce el tamaño del párrafo */
+    }
+
+    .card {
+        margin-bottom: 15px; /* Reduce el espacio entre tarjetas */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Texto más pequeño en el footer */
+    }
+}
