@@ -5,21 +5,20 @@ body {
     padding: 0;
 }
 
-/* Estilo del nav (barra de navegación) */
-/* Barra de navegación */
+
 nav {
-    background-color: #004080; /* Fondo azul oscuro del menú */
+    background-color: #004080;
     display: flex;
     justify-content: center;
     padding: 10px 0;
 }
 
 nav ul {
-    list-style: none; /* Quita los puntos de la lista */
+    list-style: none; 
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 15px; /* Espacio entre los enlaces */
+    gap: 15px; 
 }
 
 nav li {
@@ -27,27 +26,25 @@ nav li {
 }
 
 nav a {
-    color: white; /* Color inicial del texto */
-    text-decoration: none; /* Sin subrayado */
-    padding: 10px 15px; /* Espaciado interno */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    transition: color 0.3s ease, background-color 0.3s ease; 
 }
 
 nav a:hover {
-    color: #87CEEB; /* Color celeste al pasar el cursor */
-    background-color: rgb(212, 207, 207); /* Fondo blanco */
-    border-radius: 5px; /* Bordes redondeados */
+    color: #87CEEB; 
+    background-color: rgb(212, 207, 207); 
+    border-radius: 5px; 
 }
 
-
-/* Banner principal */
 .banner {
     background-color: #007bff; 
     background-size: cover;
     background-position: center;
-    height: 200px; /* Ajusta el alto del banner */
+    height: 200px; 
     padding: 50px 0;
-    margin-bottom: 100px; /* Espacio abajo del banner */
+    margin-bottom: 100px; 
 }
 
 .banner::before {
@@ -66,14 +63,14 @@ nav a:hover {
     z-index: 2;
 }
 
-/* Carrusel */
-.carousel img {
-    width: 100%; 
-    height: auto; 
-    max-height: 400px; 
-    object-fit: cover; 
-    border-radius: 5px; 
+
+.carousel-item img {
+    width: 500%;
+    height: auto;
+    object-fit: cover;  
+    object-position: center; 
 }
+
 
 @media (max-width: 768px) {
     .carousel img {
@@ -82,68 +79,75 @@ nav a:hover {
 }
 
 
-/* Footer */
+.zoom-effect {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom-effect:hover {
+    transform: scale(1.2); 
+}
+
+
 footer {
     background-color: #dee1e4; 
-    color: black;  /* Cambiar color del texto para que contraste mejor */
-    padding: 4px 0;  /* Reducir el padding para hacer el footer más compacto */
+    color: black;  
+    padding: 4px 0; 
     text-align: center;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    font-size: 0.9rem; 
 }
 
 footer a {
-    color:  #007bff; ; /* Color de los iconos por defecto */
+    color:  #007bff; ; 
     text-decoration: none;
-    transition: color 0.3s ease; /* Suavizar transición del color */
+    transition: color 0.3s ease; 
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: #397cc4; /* Color azul para el hover */
+    color: #397cc4; 
 }
 
-/* Iconos sociales en el footer */
+
 footer .bi {
-    font-size: 1.5rem;  /* Aumentar tamaño de los iconos */
+    font-size: 1.5rem;  
     transition: color 0.3s ease;
 }
 
 footer .bi:hover {
-    color: #007bff; /* Cambiar color de los iconos al pasar el cursor */
+    color: #007bff; 
 }
 
-/* Tarjetas de contenido */
+
 .card-img-top {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-/* Imágenes específicas */
+
 .img-desastre {
     width: 100%;
-    max-width: 300px; /* Ajusta el ancho máximo */
+    max-width: 300px; 
     height: 200px;
     object-fit: cover;
-    margin: 0 auto; /* Centra la imagen */
+    margin: 0 auto; 
     display: block;
 }
 
-/* Responsivo para texto */
 @media (max-width: 768px) {
     .banner h1 {
-        font-size: 1.5rem; /* Reduce el tamaño del título */
+        font-size: 1.5rem; 
     }
 
     .banner p {
-        font-size: 1rem; /* Reduce el tamaño del párrafo */
+        font-size: 1rem;
     }
 
     .card {
-        margin-bottom: 15px; /* Reduce el espacio entre tarjetas */
+        margin-bottom: 15px; 
     }
 
     footer {
-        font-size: 0.8rem; /* Texto más pequeño en el footer */
+        font-size: 0.8rem; 
     }
 }
